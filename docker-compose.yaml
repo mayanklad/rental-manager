@@ -26,14 +26,17 @@ services:
       db:
         condition: service_healthy
     environment:
-      SPRING_APPLICATION_NAME: rental-manager-api
-      # PostgreSQL DB config
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/rental_db
-      SPRING_DATASOURCE_USERNAME: rental_user
-      SPRING_DATASOURCE_PASSWORD: rental_pass
+      # DB config
+      JDBC_PREFIX: jdbc
+      DB_PROTOCOL: postgresql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: rental_db
+      DB_USERNAME: rental_user
+      DB_PASSWORD: rental_pass
       # JPA config
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: "true"
+      JPA_DDL_AUTO: update
+      JPA_SHOW_SQL: "true"
       # Backend server
       SERVER_PORT: 8080
 

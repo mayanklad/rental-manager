@@ -39,6 +39,7 @@ services:
       JPA_SHOW_SQL: "true"
       # Backend server
       SERVER_PORT: 8080
+      FRONTEND_URL: http://localhost:3000
 
   frontend:
     build:
